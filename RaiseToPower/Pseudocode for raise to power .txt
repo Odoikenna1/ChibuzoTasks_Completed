@@ -1,0 +1,20 @@
+initialize variables for input: 
+
+	use variable names base and power to store first and second input
+
+initialize variable for expontential value with a value of 1
+
+prompt the user for to collect input for first and second integer values
+
+useing a loop;
+
+	define a loop continuation condition with a true boolean evaluation (specifically define your power to not be greater than zero)
+
+	set an arithmetic operation within the body of the loop that will multiple the base by the expontential value
+
+	use a decrement operator to have the value of the power reduced by one until the condition becomes false
+
+print out your result at the end of the program
+	
+
+	

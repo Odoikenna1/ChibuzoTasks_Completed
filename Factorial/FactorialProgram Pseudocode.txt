@@ -1,0 +1,19 @@
+collect and read input from user
+
+store input in variable factorial user input
+
+initialize a variable for factorial result assign 1 to it
+
+
+
+use a loop to iteratate a block of code
+
+	initialize a counter variable for counter assign 1 to it
+
+	set a condition; counter is less than factorial for user input
+
+	increase count by 1
+
+set your arithmetic operation for exponential calculation
+
+then print the update value as the factorial of the user input

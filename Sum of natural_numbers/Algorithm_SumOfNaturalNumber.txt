@@ -1,0 +1,23 @@
+Problem:
+
+Write a program to calculate the sum of first 10 natural number.
+
+Algorithm:
+
+step 1
+
+initialize your variable (naturalNumber) = 0;
+
+Step 2
+
+using a for loop;
+
+	(intialize a variable (counter); set a condition: counter < number of times you  want the iteration to happen; use increment operation)
+
+Step 3
+
+Inside the body of the for loop add the counter value to the naturalNumber and assign the value to the naturalNumber
+
+step 4
+
+print out the naturalNumber

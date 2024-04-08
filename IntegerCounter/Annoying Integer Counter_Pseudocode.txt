@@ -1,0 +1,28 @@
+initialize variables for:
+numberOfZeros
+positiveNumber
+negativeNumber
+
+ask how many times the user wants to repeatedly perform the input task
+
+save the int value in a variable call it userInput
+
+using a for loop:
+
+initialize a counter variable with 0;
+
+define a loop continous conditionion with a boolean (true) evalution saying userInput is greater than the counter
+(so the program runs as long as that statement is true, until it becomes false)
+
+set a condtion to count the amount of positive, negative and zero int inputs the user input; do this by incrementing the variable by 1 
+
+use a selection statement to check if all or any input is zero 0
+
+
+if all or any input is a positive number from 1 to 1 million
+
+if all or any input is a negative number from -1 to 
+
+-1 million 
+
+

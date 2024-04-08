@@ -1,0 +1,30 @@
+Write a program to enter numbers until the user wnats to exit the program, then display the counts of positive, negative and zeros entered.
+
+component:
+
+input
+
+loop
+
+sentinel value
+
+selection statemnt:
+
+I want the selection statement to change the boolean evaluation of the  loop continous condition by
+
+checking the value of the user input and comparing it to the flagvalue in order to exit
+
+
+Pseudocode:
+
+request number input
+
+loop the prompt request
+
+use a flag value to exit out of program
+
+using selection statement
+	print input if user input is positive number
+	print input if user input is negative number
+	print input if user input is zero
+

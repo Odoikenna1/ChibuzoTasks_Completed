@@ -1,0 +1,21 @@
+Prompt the user to enter an integer between 0 and 100.
+
+Read the integer input from the user and store it as 'number'.
+
+Initialize a variable 'sum' to 0 to store the sum of the digits.
+
+While 'number' is greater than 0:
+
+    Extract the rightmost digit of 'number' using the % (modulo) operator by 10 
+
+    (the place value for the right most digit of a number is 10) and store it in a variable 'digit'.
+
+    Add 'digit' to 'sum'.
+
+    Update 'number' by dividing it by 10 using the / (integer division) operator.
+
+ After the loop, 'sum' will contain the sum of all the digits in the original number.
+
+ Print the sum of the digits.
+
+

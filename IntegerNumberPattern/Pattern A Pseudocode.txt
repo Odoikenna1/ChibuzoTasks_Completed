@@ -1,0 +1,11 @@
+Pattern A Pseudocode
+
+Define a variable 'rows' to store the number of rows in the triangle (let's set it to 6).
+
+Loop from 1 to 'rows':
+
+    Within the loop, loop from 1 to the current row number:
+
+    Print the current loop index.
+
+    Move to the next line.

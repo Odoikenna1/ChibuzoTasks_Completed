@@ -1,99 +1,132 @@
-import java.util.Arrays;
-
 import java.util.Scanner;
 
 public class StudentGradeAdvanced {
-	public static void main(String[] args){
-		
-		System.out.println("\nStudent grade application\n");
-		
-		Scanner input = new Scanner(System.in);
-		
-		System.out.print("How many students do you have? ");
-		int numberOfStudents = input.nextInt();
-		
-		System.out.print("How many subjects do they offer? ");
-		int numberOfSubjectsOffered = input.nextInt();
-		
-		System.out.println("\nSaving  >>>>>>>>>>>>>>>>>>>");
-		System.out.println("Saved  successfully");
-		System.out.println("===================================");
-		
-		int[][] arrayOfSubjectScores = new int[numberOfStudents][numberOfSubjectsOffered];
-		
-		System.out.println("\nThe number of students entered: " + numberOfStudents);
-		System.out.println("The number of subjects entered: " + numberOfSubjectsOffered);
-		
-		int row = arrayOfSubjectScores.length;
-		int column = arrayOfSubjectScores[0].length;
+    public static void main(String[] args) {
+        System.out.println("\nStudent grade application\n");
 
-		System.out.println(); 
-		
-		int temp = numberOfSubjectsOffered -1;
-		int studentCounter = 1;
-		int subjectInputCounter = 1;
-		int total = 0;
-		float average = 0f;
-		int gradeCounter = 1;
+        Scanner input = new Scanner(System.in);
 
+        System.out.print("How many students do you have? ");
+        int numberOfStudents = input.nextInt();
+
+        System.out.print("How many subjects do they offer? ");
+        int numberOfSubjectsOffered = input.nextInt();
+
+        System.out.println("\nSaving  >>>>>>>>>>>>>>>>>>>");
+        System.out.println("Saved  successfully");
+        System.out.println("===================================");
+
+        int[][] arrayOfSubjectScores = new int[numberOfStudents][numberOfSubjectsOffered];
+
+        System.out.println("\nThe number of students entered: " + numberOfStudents);
+        System.out.println("The number of subjects entered: " + numberOfSubjectsOffered);
+
+        inputScores(arrayOfSubjectScores, input);
+
+        displayScores(arrayOfSubjectScores);
+
+		// Calculate positions based on average grades
+		double[] positions = calculatePositions(arrayOfSubjectScores);
+
+    }
+
+    // Method to input scores for each student
+    private static void inputScores(int[][] scores, Scanner input) {
+
+        for (int i = 0; i < scores.length; i++) {
+
+            System.out.printf("%nEntering scores for student %d%n", i + 1);
+
+            for (int j = 0; j < scores[i].length; j++) {
+
+                System.out.printf("Enter score for subject %d: ", j + 1);
+
+                scores[i][j] = input.nextInt();
+
+                System.out.println("\nSaving  >>>>>>>>>>>>>>>>>>>");
+
+                System.out.println("Saved  successfully");
+            }
+        }
+    }
+
+    // Method to display scores
+    private static void displayScores(int[][] scores) {
+        System.out.println("\n====================================================================================================");
+        System.out.printf("STUDENTS%7s", " ");
+
+        for (int j = 1; j <= scores[0].length; j++) {
+
+            System.out.printf("%-12s", "SUB " + j);
+        }
+
+        System.out.printf("TOT%7sAVE%7sPOS%7s%n", " ", " ", " ");
+
+        System.out.println("====================================================================================================");
+        for (int i = 0; i < scores.length; i++) {
+
+            int total = 0;
+
+            for (int score : scores[i]) {
+
+                total += score;
+            }
+
+            double average = (double) total / scores[i].length;
+
+            System.out.printf("Student %d:%5s", i + 1, "");
+
+            for (int score : scores[i]) {
+
+                System.out.printf("%3d%8s", score, " ");
+            }
+            System.out.printf("%3s%-8d%1s%-8.2f%n", " ", total, " ", average);
+        }
+
+        System.out.println("====================================================================================================");
+    }
+
+
+
+	public static double[] calculatePositions(int[][] scores) {
+        averages = new double[scores.length];
+        for (int i = 0; i < scores.length; i++) {
+            int total = 0;
+            for (int score : scores[i]) {
+                total += score;
+            }
+            averages[i] = (double) total / scores[i].length;
+        }
 		
-		for (int i = 0; i < row; i++) {
-			
-			for (int j = 0; j < column; j++) {
-				
-			System.out.printf("%nEntering score for student %d%n", studentCounter);
-			
-			System.out.printf("Enter score for subject %d: %n", subjectInputCounter);
-			int scores = input.nextInt();
-			
-			System.out.println("\nSaving  >>>>>>>>>>>>>>>>>>>");
-			System.out.println("Saved  successfully");
-				
-				arrayOfSubjectScores[i][j] = scores;
-				
-				total += scores;				
-				if (subjectInputCounter == column) {
-				
-				studentCounter++;
-				while (subjectInputCounter != 0)
-				subjectInputCounter--;
-				}
-				subjectInputCounter++;
-				gradeCounter++;
-				
-				
-			}
-			
-		}
-		System.out.println();
-		
-			System.out.println("==================================================");
-			System.out.printf("STUDENTS%3s", "");
-			for (int j = 1; j <= column; j++) {
-				
-				System.out.printf("Subject %d%2s ", j,"");
-			}
-			System.out.printf("TOT%3s", "");
-			System.out.printf("AVE%3s", "");
-			System.out.printf("POS%3s%n", "");
-			System.out.println("==================================================");
-			//System.out.println();
-			int x = 1;
-			for (int i = 0; i < row -1; i++) {
-				
-				System.out.printf("%nStudent %d:%3s%s ", x, "", arrayOfSubjectScores[0][i]);
-				x++;
-			}
-			
-		average = total / (float)gradeCounter;
-				
-			
-			/*System.out.println(arrayOfSubjectScores[0][0]);
-				System.out.println(arrayOfSubjectScores[0][1]);
-				System.out.println(arrayOfSubjectScores[0][2]);
-				System.out.println(arrayOfSubjectScores[0][3]);*/
-		//System.out.println("\nBelow are the array of scores entered");
-		//System.out.println(Arrays.deepToString(arrayOfSubjectScores));
-		//System.out.println("Total scores are " + total + " Average of scores are: " + average);
 	}
+	        // Sort averages array and remember the original index positions
+
+        int[] positions = new int[averages.length];
+
+        for (int x = 0; x < positions.length; x++) {
+            positions[x] = x;
+        }
+        for (int i = 0; i < averages.length - 1; i++) {
+
+            for (int j = 0; j < averages.length - i - 1; j++) {
+
+                if (averages[j] < averages[j + 1]) {
+
+                    double temp = averages[j];
+
+                    averages[j] = averages[j + 1];
+
+                    averages[j + 1] = temp;
+
+                    int tempIndex = positions[j];
+
+                    positions[j] = positions[j + 1];
+
+                    positions[j + 1] = tempIndex;
+                }
+            }
+        }
+        return positions;
+    }
+
 }

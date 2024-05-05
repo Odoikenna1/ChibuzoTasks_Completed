@@ -1,0 +1,31 @@
+/*
+Write a function that returns the largest element in a list
+
+Steps:
+1: initialize variable
+	- one for the array
+
+	- the other for the max
+
+2: create a for loop;
+	- initialize index counter variable
+	  (this will help you comb through every element 
+	   of your array using their index number)
+
+	- declare a true statement to activate the loop
+	  (This will start the loop)
+
+	- use an increment expression to increase the value of the index
+
+3: inside the body of the loop:
+	- use a selection statement (if) to perform an action if a certain condition is true
+
+	- the objective here: is to check (at each iteration) if the element of each index
+	  at each iteration is less that the first element in the max variable (array[0]) and
+	  if so then the new element(index) will be stored as the new max. 
+
+This sequence will be repeated until the last maximum value in the array is discovered and (Sout'd)displayed.
+
+4: Sout the max
+
+*/

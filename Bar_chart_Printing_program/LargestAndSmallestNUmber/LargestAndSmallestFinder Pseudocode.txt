@@ -1,0 +1,26 @@
+
+Ask the user how many times they want the program to run and store the input as userNumOfInputs.
+
+Initialize minNumber to the largest possible integer value and maxNumber to the smallest possible integer value.
+
+Repeat userNumOfInputs times:
+   Ask the user to input a number and store it as inputNumber.
+   If inputNumber is smaller than minNumber(Max value), update minNumber to inputNumber.
+   If inputNumber is greater than maxNumber(Min value), update maxNumber to inputNumber.
+
+Print the smallest number (minNumber) and the largest number (maxNumber).
+
+
+This program takes in user input and compares it to the Max value that can be stored in Integer type
+
+if that input is smaller than the Max Value, the variable for the minValue is update as the the new 
+
+maximum value to be compared with other inputs.
+
+As the program runs, it checks every input from the user the and compares it to the new minvalue(Max value) 
+
+and updates the container that hold the smallest and largest variables.
+
+At the end of the program, all the largest and smallest values are printed.
+
+

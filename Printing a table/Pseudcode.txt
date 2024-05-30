@@ -1,0 +1,16 @@
+For Printing a table
+
+Print the table header with column headings "a", "b", and "pow(a, b)".
+
+For each row in the table:
+   Initialize variable 'a' to the first value in the 'a' column (1 in this case).
+
+    Initialize variable 'b' to the second value in the 'b' column (2 in this case).
+
+    Calculate the result of raising 'a' to the power of 'b' using integer exponentiation and store it in 'pow'.
+
+        - You can achieve this by implementing a custom integer exponentiation function or using repeated multiplication.
+
+   Print 'a', 'b', and 'pow' separated by tabs or spaces as a row in the table.
+     Move to the next line.
+

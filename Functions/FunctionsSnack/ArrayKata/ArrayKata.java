@@ -1,6 +1,6 @@
 public class ArrayKata {
 
-	public static int findOddNumbers (int[] arrayOfNumbers) {
+	public static int[] findOddNumbers (int[] arrayOfNumbers) {
 
 
 

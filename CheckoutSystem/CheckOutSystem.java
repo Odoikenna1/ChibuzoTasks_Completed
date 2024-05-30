@@ -1,3 +1,6 @@
+import java.time.format.*;
+import java.time.LocalDateTime;
+
 import java.util.ArrayList;
 
 import java.util.Scanner;
@@ -27,13 +30,16 @@ public class CheckOutSystem {
 		double subTotal = 0;
 
 		boolean programIsActive = true;
+		
+		LocalDateTime timeOfTranaction = LocalDateTime.now();
 
+		DateTimeFormatter dateTime_Format = DateTimeFormatter.ofPattern("dd-MMM-yyy hh:mm:ss a");
+		
 		String message = """
 				\nSEMICOLON STORES
 				MAIN BRANCH
 				LOCATION: 312, HEBERT MACAULAY WAY, SABO YABA, LAGOS.
 				TEL: 03293828343
-				DATE: 11/04/2024
 				""";
 
 		Scanner input = new Scanner(System.in);
@@ -95,7 +101,8 @@ public class CheckOutSystem {
 
 		double billTotal =  subTotal + discountGiven + vat;
 
-		System.out.print(message);
+		String x = timeOfTranaction.format(dateTime_Format);
+		System.out.print(message + "Time of transaction: " + x + "\n");
 
 		System.out.printf("Cashier's Name: %s%n", cashiersName);
 		System.out.printf("Customer Name: %s%n", customerName);
